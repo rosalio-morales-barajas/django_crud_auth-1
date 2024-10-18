@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<h1 style="color:blue;background-color: yellow;width: 350px;">Create A New Project</h1>
+
+<form method="POST">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button>
+        Send
+    </button>
+
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>Tasks</h1>
+
+{% for tarea in tareas %}
+
+<p style="color: blue;width: 900px;">
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+</p>
+
+{% if tarea.done == 0 %}
+
+<h3 style="background-color: yellow;width: 190px;">Tarea A Realizar ⏰</h3>
+
+{% else %}
+
+<h3 style="background-color: greenyellow;width: 190px;">Tarea Terminada &#x2705</h3>
+
+{% endif %}
+
+<h2>Nombre de la tarea: {{ tarea.title }}</h2>
+<h2>Descripcion de la tarea: {{ tarea.description }}</h2>
+<h2>A que proyecto pertenece esta tarea: {{ tarea.project }}</h2>
+<button>
+    eliminar
+</button>
+<button>
+    done &#x2705;
+</button>
+
+<p style="color: blue;width: 900px;
+">//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+</p>
+
+{% endfor %}
+
+{% endblock %}

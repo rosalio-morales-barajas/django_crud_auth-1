@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1 style="text-align: center;">Project Details</h1>
+
+
+<h1 style="color: blue;">{{ projects.name }} </h1>
+ 
+{% for task in tasks %}
+<article class="card">
+    <h2>{{ task.title }}</h2>
+</article>
+{% endfor %}
+
+
+{% endblock %}
